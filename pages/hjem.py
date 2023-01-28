@@ -4,6 +4,8 @@ import plotly.express as px
 import dash_bootstrap_components as dbc
 import pandas as pd
 
+
+
 dash.register_page(__name__, path='/', name='Hjem')  # '/' is home page
 
 kolonner = ['Spiller', 'Kamper spilt', 'Vunnet', 'Tapt']
@@ -69,3 +71,7 @@ def update_tabell(lagre):
         df.sort_values(by='Vunnet', inplace=True, ascending=False)
 
     return df.to_dict('records')
+
+
+
+

@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 from funksjoner.elo import expected, elo
 import datetime
-import dash_core_components as dcc
+
 
 
 
