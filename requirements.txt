@@ -4,4 +4,3 @@ gunicorn
 datetime
 dash_bootstrap_components
 schedule
-smtplib
