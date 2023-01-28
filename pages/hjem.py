@@ -10,8 +10,6 @@ kolonner = ['Spiller', 'Kamper spilt', 'Vunnet', 'Tapt']
 
 layout = html.Div(
     [
-        dbc.Row(
-            [
 
                 dbc.Col(
                     [
@@ -22,18 +20,22 @@ layout = html.Div(
                             style_cell={'fontSize': 25, 'font-family': 'sans-serif'},
                             page_size=20,
                             fixed_rows={'headers': True},
-                            style_table={'height': 200, 'overflowY': 'auto', 'padding-top': '20px', 'width': '50%',
-                                         'margin-left': 'auto', 'margin-right': 'auto'},
+                            style_table={'height': 200, 'overflowY': 'auto', 'padding-top': '20px', 'width': '100%',
+                                         'margin-left': '40%', 'margin-right': 'auto', 'color' : 'black'},
                             style_data={
                                 'whiteSpace': 'normal',
                                 'height': 'auto',
                                 'textOverflow': 'ellipsis',
-                                'maxWidth': 0
+                                'maxWidth': 0,
+                                'color' : 'black',
+
+
                             }),
 
-                        html.Button('Oppdater tabell', id='save', n_clicks=0,
-                                    style={"background-color": "#C78800", "margin-left": "50%", 'height': '37px',
-                                           'horizontalAlign': 'middle'})
+                        dbc.Button('Oppdater tabell', id='save', n_clicks=0, className='mt-4 border',
+                                    style={"background-color": "#C78800", "margin-left": "80%", 'height': '37px',
+                                           'horizontalAlign': 'middle',}
+                                    )
 
                     ], xs=12, sm=12, md=3, lg=3, xl=6, xxl=6,
                 )
@@ -41,8 +43,7 @@ layout = html.Div(
             ]
         )
 
-    ]
-)
+
 
 
 @callback(

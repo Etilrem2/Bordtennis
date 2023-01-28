@@ -30,30 +30,32 @@ layout = html.Div(
                     placeholder='Passord:',
                     disabled=False,
                     readOnly=False,
-                    style={"margin-left": "300px"},
+                    style={'color' : 'black'},
 
                 )
 
             ]),
 
         dcc.Markdown("Vinner:",
-                     style={'width': '40%', 'display': 'inline-block', 'fontSize': 25, 'textAlign': 'right'}),
+                     style={'width': '35%', 'display': 'inline-block', 'fontSize': 25, 'textAlign': 'right', 'color' : 'black'}),
         dcc.Dropdown(options=df.Spiller.unique(), id='vinner',
                      style={'width': '50%', 'height': '30px', 'display': 'inline-block', 'textAlign': 'left',
-                            'padding-left': '20px'}),
+                            'padding-left': '20px', 'padding-bottom' : '10px'}),
 
         html.Div(
             [
 
                 dcc.Markdown("Taper:",
-                             style={'width': '40%', 'display': 'inline-block', 'fontSize': 25, 'textAlign': 'right'}),
+                             style={'width': '35%', 'display': 'inline-block', 'fontSize': 25, 'textAlign': 'right', 'color' : 'black'}),
                 dcc.Dropdown(options=df.Spiller.unique(), id='taper',
                              style={'width': '50%', 'height': '30px', 'display': 'inline-block', 'textAlign': 'left',
                                     'padding-left': '20px'}),
 
-                html.Button('Registrer resultat', id='save', n_clicks=0,
-                            style={"background-color": "#C78800", "margin-left": "950px", 'height': '37px',
-                                   'horizontalAlign': 'right'}),
+                dbc.Button('Registrer resultat', id='save', n_clicks=0, className = 'mt-2 mb-4 border',
+                            style={"background-color": "#C78800", "margin-left": "40%", 'height': '37px',
+                                   'horizontalAlign': 'middle'}),
+
+
 
                 html.Div(id='my-output', style={"margin-left": "300px"}),
 

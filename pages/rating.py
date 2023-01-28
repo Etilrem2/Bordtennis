@@ -21,24 +21,27 @@ layout = html.Div(
             page_size=20,
             fixed_rows={'headers': True},
             style_table={'height': 200, 'overflowY': 'auto', 'padding-top': '20px', 'width': '50%',
-                         'margin-left': 'auto', 'margin-right': 'auto'},
+                         'margin-left': '19%', 'margin-right': '40%', 'color' : 'black'},
             style_data={
                 'whiteSpace': 'normal',
                 'height': 'auto',
                 'textOverflow': 'ellipsis',
-                'maxWidth': 0
+                'maxWidth': 0,
+                'color' : 'black',
             }),
 
-        html.Button('Hent rating', id='save', n_clicks=0,
-                    style={"background-color": "#C78800", "margin-left": "50%", 'height': '37px',
+
+
+        dbc.Button('Hent rating', id='save', n_clicks=0, className = 'mt-4 mb-4 border',
+                    style={"background-color": "#C78800", "margin-left": "40%", 'height': '37px',
                            'horizontalAlign': 'middle'}),
 
+
+
         html.Div(id='countdown-container', children=[
-            html.H1(id='countdown-text', style={'width': '100%', 'textAlign': 'center'}),
+            html.H1(id='countdown-text', style={'margin-left' : '22%', 'fontSize' : 30}),
             dcc.Interval(id='interval-component', interval=1 * 1000, n_intervals=0)])
 
-        # html.H1(id='countdown-text', style = {'margin-left' : '50%', 'horizontalAlign' : 'middle'}),
-        # dcc.Interval(id='interval-component', interval=1*1000, n_intervals=0)
     ]
 )
 
