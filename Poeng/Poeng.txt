@@ -1,0 +1,4 @@
+Eigil 3 1 2
+Erlend 1 1 0
+Jonas 2 1 1
+Kjetil 4 2 2
