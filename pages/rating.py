@@ -90,7 +90,7 @@ def update_countdown(n):
     time_until_end = end_of_month - today
     time_until_end_seconds = int(time_until_end.total_seconds())
 
-    if time_until_end_seconds < 60:
+    if time_until_end_seconds < 3600:
         with open('Poeng/Elo.txt', 'w') as f:
             e = {'Eigil': 1000, 'Erlend': 1000, 'Jonas': 1000, 'Kjetil': 1000}
 
