@@ -135,7 +135,7 @@ app.layout = dbc.Container([
 if __name__ == "__main__":
     app.run_server(debug=False)
 
-schedule.every().day.at("17:30").do(job2)
+schedule.every().day.at("17:30").do(job)
 
 while True:
     schedule.run_pending()
