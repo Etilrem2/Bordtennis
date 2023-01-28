@@ -4,5 +4,5 @@ gunicorn
 datetime
 dash_bootstrap_components
 schedule
-EmailMessage
+email.message
 smtplib
