@@ -7,6 +7,7 @@ import pandas as pd
 
 
 app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.SPACELAB])
+server = app.server
 
 
 sidebar = html.Div(
