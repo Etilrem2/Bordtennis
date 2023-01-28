@@ -3,3 +3,7 @@ pandas
 gunicorn
 datetime
 dash_bootstrap_components
+time
+schedule
+EmailMessage
+smtplib
