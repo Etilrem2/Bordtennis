@@ -63,4 +63,4 @@ app.layout = dbc.Container([
 ], fluid=True)
 
 if __name__ == "__main__":
-    app.run_server(debug=False, port='8081')
+    app.run_server(debug=False)
