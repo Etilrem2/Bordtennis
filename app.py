@@ -3,11 +3,10 @@ from dash import html, dcc
 import dash_bootstrap_components as dbc
 
 app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.SPACELAB])
-server = app.server
 
 sidebar = html.Div(
     [
-        html.Img(src="assets/ssb-logo.svg", style={"width": "230px"}),
+        html.Img(src="assets/ssb-logo.svg", style={"width": "230px", 'padding-bottom' : '20px'}),
 
         dbc.Nav(
             [
@@ -18,11 +17,16 @@ sidebar = html.Div(
                     ],
                     href=page["path"],
                     active="exact",
+                    style = {'color': 'black'}
                 )
                 for page in dash.page_registry.values()
             ],
             vertical=True,
             pills=True,
+
+
+
+
 
         )],
     style={"position": "fixed",
@@ -34,14 +38,15 @@ sidebar = html.Div(
            "padding": "2rem 1rem",
            "background-color": "#075745",
            'font-family': 'sans-serif',
-           'fontSize': '20px'},
+           'fontSize': '20px',
+           },
 )
 
 app.layout = dbc.Container([
     dbc.Row([
         dbc.Col(html.Div("Bordtenniskameratene",
                          style={'fontSize': 40, 'textAlign': 'center', "margin-left": "18rem", "margin-right": "2rem",
-                                "padding": "2rem 1rem",
+                                "padding": "2rem 1rem", "color": "black"
                                 }))
     ]),
 
