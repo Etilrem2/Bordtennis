@@ -93,7 +93,7 @@ def update_countdown(n):
     time_until_end = end_of_month - today
     time_until_end_seconds = int(time_until_end.total_seconds())
 
-    if time_until_end_seconds < 200365:
+    if time_until_end_seconds < 199600:
 
         e = {}
 
