@@ -3,10 +3,8 @@ from dash import html, dcc
 import dash_bootstrap_components as dbc
 import smtplib
 from datetime import date
-import time
-import schedule
 import pandas as pd
-from email.message import EmailMessage
+
 
 app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.SPACELAB])
 
